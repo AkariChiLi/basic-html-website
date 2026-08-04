@@ -4,20 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>赤黎的垃圾站</title>
+
+    <style>
+      *{
+         margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+        html {
+            scrollbar-gutter: stable;
+        }
+
+      .logo img{
+        width: 30px;
+        height: 30px;
+      }
+
+      #nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 100%;
+        height: 50px;
+        background-color: rgb(255,149,0)
+      }
+
+      #nav a{
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    </style>
 </head>
+
 <body>
     <header>
        <div class="logo">
          <img src="logo.png" alt="Logo">
          <span>AkariChiLi's Blog</span> 
        </div>
-   </header>
-   <nav>
-      <a href="Basic HTML HomePage.html">Home</a>
-      <a href="Basic HTML Projects.html">Projects</a>
-      <a href="Basic HTML Articles.html">Articles</a>
-      <a href="Basic HTML Contact Page.html">Contact</a>
-   </nav>
+    </header>
+
+        <nav id="nav">
+            <a href="Basic HTML HomePage.html">Home</a>
+            <a href="Basic HTML Projects.html">Projects</a>
+            <a href="Basic HTML Articles.html">Articles</a>
+            <a href="Basic HTML Contact Page.html">Contact</a>
+        </nav>
 
    <main>
      <section class="projects">
