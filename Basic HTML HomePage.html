@@ -4,45 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>赤黎的垃圾站</title>
+    <link rel="stylesheet" href="mainstyle.css">
+
     <style>
-      *{
-         margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
 
-      body{
-        margin: 0;
-      }
-
-      html {
-    scrollbar-gutter: stable;
-      }
-
-      .logo img{
-        width: 30px;
-        height: 30px;
-      }
-
-      #nav{
+      main{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        width: 100%;
-        height: 50px;
-        background-color: rgb(255,149,0)
-      }
-
-      #nav a{
-        color: black;
-        text-decoration: none;
-        font-size: 18px;
-      }
-
-      .biankuang{
-        max-width: 660px;
+        gap: 20px;
+        max-width: 1400px;
         margin: 20px auto;
+      }
+
+      .item{
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+      }
+
+      .date{
+        width:50px;
+        text-align: right;
+        color: #666
+      }
+
+      .dot{
+        width: 12px;
+        height: 12px;
+        background-color: black;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top:7px; 
+        position: relative;
+        left: 10px;
+      }
+
+      .timeline::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: black;
+      }
+      
+      .timeline{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+      }
+
+      .content{
+        flex: 1;
+      }
+
+      .changelog, .right-aside{
+        width: 280px;
+       flex-shrink: 0;
+        border: 2px solid black;
+        padding: 20px;
+      }
+      
+      .biankuang{
+        flex: 1;
         border: 2px solid black;
       }
 
@@ -100,9 +125,40 @@
        <a href="Basic HTML Contact Page.html">Contact</a>
      </nav> 
 
-   <div class="biankuang">
-    <main>
+    <main class="main">
+      <aside class="changelog">
+          <h1 class="title">更新日志</h1>
+          <p class="subtitle">最近更新的记录。</p>
 
+          <div class="timeline">
+
+             <div class="item">
+               
+                  <div class="date">2026-08-05</div>
+
+                  <div class="dot"></div>
+
+                  <div class="content">
+                    <h3>完成三栏布局</h3>
+                    <p>加入左右侧边栏结构，优化主内容区域布局。</p>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="date">2026-08-04</div>
+
+                  <div class="dot"></div>
+
+                  <div class="content">
+                    <h3>学习flex布局</h3>
+                    <p>学习了flex布局,优化了布局结构。</p>
+                  </div>
+                </div>
+          </div>
+
+      </aside>
+
+       <div class="biankuang">
        <section class="zi-wo-jieshao">
           <div class="title1">
              <h1>Hi!我是赤黎。是一个前端开发<s>高手</s>菜鸟。</h1>
@@ -111,37 +167,43 @@
           <p>目前只掌握了基础HTML和CSS的知识</p>
        </section>
 
-       <div class="main-content">
-          <section class="experience">
-            <div class="title2">
-              <h1>经历</h1>
-            </div>
+           <div class="main-content">
+              <section class="experience">
+                <div class="title2">
+                  <h1>经历</h1>
+                </div>
 
-            <p>目前还是学生，对全栈只是爱好。没有经历</p>
-          </section>
+              <p>目前还是学生，对全栈只是爱好。没有经历</p>
+            </section>
 
-          <section class="skills">
-            <div class="title3">
-              <h1>技能</h1>
-            </div>
-            <p>目前掌握的技能有HTML和CSS</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-            </ul>
-          </section> 
-
-          <section class="projects">
-            <div class="title4">
-              <h1>项目</h1>
+            <section class="skills">
+              <div class="title3">
+                <h1>技能</h1>
+              </div>
+              <p>目前掌握的技能有HTML和CSS</p>
               <ul>
-                <li>一个二进制与十进制转换器</li>
-                <li>一个留言板</li>
-                <li>一个登录系统框架。日后可能发挥作用。</li>
+                <li>HTML</li>
+                <li>CSS</li>
               </ul>
-            </div>
-          </section>
+            </section> 
+
+            <section class="projects">
+              <div class="title4">
+                <h1>项目</h1>
+                <ul>
+                  <li>一个二进制与十进制转换器</li>
+                  <li>一个留言板</li>
+                  <li>一个登录系统框架。日后可能发挥作用。</li>
+                </ul>
+              </div>
+            </section>
+         </div>
+          <!-- 主要内容盒子结尾  -->
         </div>
+        <!-- biankuang盒子结尾  -->
+         <aside class="right-aside">
+          <p>暂时没有内容</p>
+         </aside>
     </main>
 
    <footer>
