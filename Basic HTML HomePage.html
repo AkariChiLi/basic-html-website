@@ -59,11 +59,38 @@
         flex: 1;
       }
 
-      .changelog, .right-aside{
+      .changelog {
         width: 280px;
        flex-shrink: 0;
         border: 2px solid black;
         padding: 20px;
+      }
+
+      .right-aside{
+        width: 280px;
+        flex-shrink: 0;
+      }
+
+      .profile-card{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 20px;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .profile-card img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .otherbox{
+        margin-top: 20px;
+        border: 2px solid black;
+        min-height: 600px;
       }
       
       .biankuang{
@@ -131,6 +158,19 @@
           <p class="subtitle">最近更新的记录。</p>
 
           <div class="timeline">
+
+            <div class="item">
+               
+                  <div class="date">2026-08-10</div>
+
+                  <div class="dot"></div>
+
+                  <div class="content">
+                    <h3>完成个人资料卡</h3>
+                    <p>改进右侧边栏结构</p>
+                  </div>
+                </div>
+
 
              <div class="item">
                
@@ -201,8 +241,19 @@
           <!-- 主要内容盒子结尾  -->
         </div>
         <!-- biankuang盒子结尾  -->
+
          <aside class="right-aside">
-          <p>暂时没有内容</p>
+           <div class="profile-card">
+              <img src="logo.png" >
+              <h2>AkariChiLi</h2>
+              <p style="font-family: kaiti">人的一生应当这样度过，当回忆往事的时候，不因虚度年华而悔恨，不因碌碌无为而羞愧。</p>
+          </div>
+
+          <div class="otherbox">
+            <p>暂时没有其他内容</p>
+          </div>
+
+
          </aside>
     </main>
 
