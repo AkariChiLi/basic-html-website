@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>赤黎的垃圾站</title>
     <link rel="stylesheet" href="mainstyle.css">
+
+    <style>
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .User-form {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
 </head>
 
 <body>
@@ -23,13 +51,21 @@
         </nav>
 
    <main>
-     <section class="project-card">
-        <h2>Datepicker</h2>
-        <p>一个日期选择器。</p>
+      <div class="projects">
+        <div class="project-card">
+            <h2>Datepicker</h2>
+            <p>一个日期选择器。</p>
+            <a href="datepicker.html">查看</a>
+        </div>
 
-        <a href="datepicker.html">查看</a>
-      
-     </section>
+        <div class="User-form">
+            <h2>User Form</h2>
+            <p>一个用户表单。</p>
+            <a href="form.html">查看</a>
+
+        </div>
+
+    </div>
     </main>
 
     <footer>
